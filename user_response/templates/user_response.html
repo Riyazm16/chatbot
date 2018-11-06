@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>chat bot user Response</h2>
+
+	<form action="" method="post">
+		{% csrf_token %}
+		<p>
+			<label>Enter your Name</label>
+			{{ form.person_name }}
+			<h5>{{form.person_name.errors}}</h5>
+
+		</p>
+		<p>
+			<label>Enter Mobile no</label>
+			{{ form.person_mobile }}
+			<h5>{{form.person_mobile.errors}}</h5>
+		</p>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<p>If you click the "Submit" button, the form-data will be sent server.</p>
+
+</body>
+</html>
